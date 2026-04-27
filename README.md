@@ -6,24 +6,24 @@ This repository contains the backend APIs for the Care Access Portal.
 
 The backend handles:
 
-- Authentication  
-- Appointments  
-- Patient Records  
-- Doctor Data  
+- Authentication
+- Appointments
+- Patient Records
+- Doctor Data
 
 ## ✨ Features
 
-- REST API Services  
-- Role-Based Login  
-- CRUD Operations  
-- JSON Responses  
-- CORS Enabled  
+- REST API Services
+- Role-Based Login
+- CRUD Operations
+- JSON Responses
+- CORS Enabled
 
 ## 🛠️ Tech Stack
 
-- Python  
-- Flask  
-- Flask-CORS  
+- Python
+- Flask
+- Flask-CORS
 
 ## 🚀 Installation & Setup
 
@@ -34,6 +34,13 @@ pip install -r requirements.txt
 python app.py
 ```
 
+### 🧪 Testing and Linting
+
+```bash
+pip install -r requirements-dev.txt
+pytest
+pylint app.py
+```
 
 ## 📁 Project Structure
 
