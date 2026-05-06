@@ -28,9 +28,10 @@ INSTALLED_APPS = [
     'api',
 ]
 
+# ✅ CORRECT MIDDLEWARE (only one block)
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # added
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
 ]
@@ -75,7 +76,7 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-# Static files (IMPORTANT for deployment)
+# Static files
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
