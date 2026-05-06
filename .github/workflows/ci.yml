@@ -2,9 +2,9 @@ name: Backend CI
 
 on:
   push:
-    branches: [main, master]
+    branches: [main]
   pull_request:
-    branches: [main, master]
+    branches: [main]
 
 jobs:
   backend:
@@ -24,10 +24,14 @@ jobs:
           pip install -r requirements.txt
           pip install -r requirements-dev.txt
 
-      - name: Run pytest
+      - name: Run migrations
+        run: |
+          python manage.py migrate
+
+      - name: Run tests
         run: |
           pytest
 
-      - name: Run pylint
+      - name: Run linting
         run: |
-          python -m pylint app.py --fail-under=8.0
+          pylint api/
